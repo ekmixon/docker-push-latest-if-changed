@@ -1,2 +1,2 @@
-FROM    ubuntu:bionic
+FROM    ubuntu:18.04
 CMD     ["echo", "bar"]
