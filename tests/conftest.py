@@ -105,10 +105,8 @@ def _get_name_with_random_suffix(name):
 
 def _wait_for_registry(registry_uri):
     check_attempts = 10
-    current_attempt = 0
     catalog_uri = f'http://{registry_uri}/v2/_catalog'
-    while current_attempt < check_attempts:
-        current_attempt += 1
+    for current_attempt in range(1, check_attempts + 1):
         try:
             response = urllib.request.urlopen(catalog_uri).read()
             assert {"repositories": []} == json.loads(response)
