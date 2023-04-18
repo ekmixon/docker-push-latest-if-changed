@@ -1,4 +1,4 @@
-FROM    ubuntu:bionic
+FROM    ubuntu:18.04
 ARG     NGINX_IP
 RUN     apt-get update && apt-get install -y wget
 
